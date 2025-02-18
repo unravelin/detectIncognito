@@ -35,8 +35,8 @@ declare global {
   }
 }
 
-export async function detectIncognito(): Promise<{ isPrivate: boolean; browserName: string }>{
-  return await new Promise(function (resolve, reject) {
+export async function detectIncognito(P: PromiseConstructor = Promise): Promise<{ isPrivate: boolean; browserName: string }>{
+  return await new P(function (resolve, reject) {
     let browserName = 'Unknown'
 
     function __callback (isPrivate: boolean): void {

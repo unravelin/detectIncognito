@@ -37,11 +37,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 exports.detectIncognito = void 0;
-function detectIncognito() {
+function detectIncognito(P) {
+    if (P === void 0) { P = Promise; }
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, new Promise(function (resolve, reject) {
+                case 0: return [4 /*yield*/, new P(function (resolve, reject) {
                         var browserName = 'Unknown';
                         function __callback(isPrivate) {
                             resolve({

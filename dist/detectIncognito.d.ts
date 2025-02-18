@@ -34,7 +34,7 @@ declare global {
         detectIncognito: typeof detectIncognito;
     }
 }
-export declare function detectIncognito(): Promise<{
+export declare function detectIncognito(P?: PromiseConstructor): Promise<{
     isPrivate: boolean;
     browserName: string;
 }>;
